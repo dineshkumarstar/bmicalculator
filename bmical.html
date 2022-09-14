@@ -1,0 +1,50 @@
+<html>
+<head>
+<!bmi has lesser than 18 is underweight>
+<!bmi lies between 18 and 25 is normal>
+<!bmi has greater than 25 is overweight>
+<script>
+function bmical()
+{
+h=document.f.t1.value;
+w=document.f.t2.value;
+
+var bmi;
+bmi=w/(h/100*h/100);
+
+if(bmi<18)
+{
+document.getElementById("d").innerHTML="According to your bmi "+bmi+" under weight";
+}
+else if(bmi>18 && bmi<=25)
+{
+document.getElementById("d").innerHTML="According to your bmi "+bmi+" normal weight";
+}
+else if(bmi>25)
+{
+document.getElementById("d").innerHTML="According to your bmi "+bmi+" over weight";
+}
+else
+{
+document.getElementById("d").innerHTML="Enter your weight & height correctly";
+}
+}
+</script>
+</head>
+<body>
+<form name="f">
+Enter your height:
+<input type="text" name="t1">
+<br>
+Enter your weight:
+<input type="text" name="t2">
+<br>
+<input type="button" value="calculate my BMI" onclick="bmical()">
+<br>
+<p id="d"></p>
+</form>
+
+</body>
+</html>
+
+
